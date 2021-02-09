@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/widgets/drawer.dart';
 
 class Homepage extends StatelessWidget {
   final int days = 30;
@@ -15,16 +16,16 @@ class Homepage extends StatelessWidget {
         fixedColor: Colors.deepPurple,
         items: [
           BottomNavigationBarItem(
-            label: "Home",
-            icon: Icon(Icons.home),
+            label: "Balance",
+            icon: Icon(Icons.account_balance),
           ),
           BottomNavigationBarItem(
-            label: "Search",
-            icon: Icon(Icons.search),
+            label: "Upload",
+            icon: Icon(Icons.upload_file),
           ),
           BottomNavigationBarItem(
-            label: "Profile",
-            icon: Icon(Icons.account_box),
+            label: "Alarm",
+            icon: Icon(Icons.alarm),
           ),
         ],
       ),
@@ -52,7 +53,7 @@ class Homepage extends StatelessWidget {
           ],
         ),
       ),
-      drawer: Drawer(),
+      drawer: MyDrawer(),
     );
   }
 }
