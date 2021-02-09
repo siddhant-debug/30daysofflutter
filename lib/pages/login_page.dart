@@ -33,7 +33,7 @@ class _LoginpageState extends State<Loginpage> {
         child: Column(
           children: [
             Image.asset(
-              "assets/images/undraw_secure_login_pdn4.png",
+              "assets/images/undraw_hey_email_liaa.png",
               fit: BoxFit.cover,
             ),
             SizedBox(
@@ -51,9 +51,7 @@ class _LoginpageState extends State<Loginpage> {
             ),
             Padding(
                 padding:
-                    const EdgeInsets.symmetric(
-                      vertical: 26, horizontal: 50)
-                      ),
+                    const EdgeInsets.symmetric(vertical: 26, horizontal: 50)),
             Column(
               children: [
                 TextFormField(

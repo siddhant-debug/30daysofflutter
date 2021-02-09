@@ -31,13 +31,25 @@ class Homepage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.navigation_rounded),
         backgroundColor: Colors.deepPurpleAccent,
-        onPressed: () {
-          
-        },
+        onPressed: () {},
       ),
       body: Center(
-        child: Container(
-          child: Text("i will learn flutter in  $days : by $name"),
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/undraw_secure_login_pdn4.png",
+              fit: BoxFit.contain,
+            ),
+            Text(
+              "i will learn flutter in  $days : by $name",
+              style: TextStyle(
+                height: 2.5,
+                fontSize: 20,
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
         ),
       ),
       drawer: Drawer(),
