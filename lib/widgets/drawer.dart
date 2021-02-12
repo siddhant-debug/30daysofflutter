@@ -8,8 +8,10 @@ class MyDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     final imageurl =
         "https://instagram.fdel3-2.fna.fbcdn.net/v/t51.2885-19/s320x320/129725250_3761735170554906_9062192265077088904_n.jpg?_nc_ht=instagram.fdel3-2.fna.fbcdn.net&_nc_ohc=07YWMNRPkjgAX837WDE&tp=1&oh=8517f7db727e12d1716220c1129666e1&oe=604CD0E2";
+
     return Drawer(
       child: Container(
+        
         color: Colors.deepPurple,
         child: ListView(
           padding: EdgeInsets.zero,
