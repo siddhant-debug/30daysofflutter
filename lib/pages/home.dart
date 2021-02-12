@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/widgets/drawer.dart';
-
+import 'package:project1/models/catalog.dart';
+import 'package:project1/widgets/item_widget.dart';
 
 class Homepage extends StatelessWidget {
   final int days = 30;
@@ -22,11 +23,17 @@ class Homepage extends StatelessWidget {
           ),
           BottomNavigationBarItem(
             label: "Wishlist",
-            icon: Icon(Icons.favorite, color: Colors.pink,),
+            icon: Icon(
+              Icons.favorite,
+              color: Colors.pink,
+            ),
           ),
           BottomNavigationBarItem(
             label: "Help Center",
-            icon: Icon(Icons.help_center , color: Colors.blue,),
+            icon: Icon(
+              Icons.help_center,
+              color: Colors.blue,
+            ),
           ),
         ],
       ),
@@ -35,10 +42,17 @@ class Homepage extends StatelessWidget {
         backgroundColor: Colors.deepPurpleAccent,
         onPressed: () {},
       ),
-      body: Center(
-          child: Container(
-        child: Text("My name is $name , i will learn flutter in $days days "),
-      )),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: ListView.builder(
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWidget(
+              item: CatalogModel.items[index],
+            );
+          },
+        ),
+      ),
       drawer: MyDrawer(),
     );
   }
