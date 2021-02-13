@@ -1,14 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'dart:convert';
 import 'package:project1/widgets/drawer.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:project1/widgets/item_widget.dart';
 
-class Homepage extends StatelessWidget {
+class Homepage extends StatefulWidget {
+  @override
+  _HomepageState createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage> {
   final int days = 30;
+
   final String name = "Siddhant";
+  @override
+  void initState() {
+    super.initState();
+    loaddata();
+  }
+
+  loaddata() async {
+    final catalogJson = await rootBundle.loadString("assets/files/catalog.json");
+    final decodedData = jsonDecode(catalogJson);
+    var productsData = decodedData["products"];
+    print(productsData);
+  }
 
   @override
   Widget build(BuildContext context) {
+    final dummyList = List.generate(20, (index) => CatalogModel.items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text("MyApp"),
@@ -45,10 +66,10 @@ class Homepage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: ListView.builder(
-          itemCount: CatalogModel.items.length,
+          itemCount: dummyList.length,
           itemBuilder: (context, index) {
             return ItemWidget(
-              item: CatalogModel.items[index],
+              item: dummyList[index],
             );
           },
         ),
