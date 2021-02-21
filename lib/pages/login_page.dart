@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project1/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
+
 
 class Loginpage extends StatefulWidget {
   @override
@@ -37,7 +39,7 @@ class _LoginpageState extends State<Loginpage> {
               fit: BoxFit.cover,
             ),
             SizedBox(
-              height: 15.0,
+              height: 10.0,
             ),
             Text(
               "Welcome $name",
@@ -47,45 +49,54 @@ class _LoginpageState extends State<Loginpage> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 10,
             ),
             Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 26, horizontal: 50)),
             Column(
+              
               children: [
-                TextFormField(
+                
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                      decoration: InputDecoration(
+                        hintText: "Enter Username",
+                        labelText: "Username",
+                      ),
+                      validator: (value) {
+                        if (value.isEmpty) {
+                          return "Username cannot be empty";
+                        }
+                        return null;
+                      },
+                      onChanged: (value) {
+                        name = value;
+                        setState(() {});
+                      }),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: TextFormField(
+                    
+                    obscureText: true,
                     decoration: InputDecoration(
-                      hintText: "Enter Username",
-                      labelText: "Username",
+                      hintText: "Enter Password",
+                      labelText: "Passowrd",
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
-                        return "Username cannot be empty";
+                        return "Password cannot be empty";
+                      } else if (value.length < 6) {
+                        return "passowr length should be atleast 6";
                       }
                       return null;
                     },
-                    onChanged: (value) {
-                      name = value;
-                      setState(() {});
-                    }),
-                TextFormField(
-                  obscureText: true,
-                  decoration: InputDecoration(
-                    hintText: "Enter Password",
-                    labelText: "Passowrd",
                   ),
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return "Password cannot be empty";
-                    } else if (value.length < 6) {
-                      return "passowr length should be atleast 6";
-                    }
-                    return null;
-                  },
                 ),
                 SizedBox(
-                  height: 40,
+                  height: 15,
                 ),
                 Material(
                   color: Colors.deepPurple,
@@ -97,9 +108,11 @@ class _LoginpageState extends State<Loginpage> {
                       width: changeButton ? 50 : 150,
                       height: 35,
                       alignment: Alignment.center,
+                      
                       child: changeButton
                           ? Icon(
-                              Icons.done,
+                              
+                              Icons.done_outlined,
                               color: Colors.white,
                             )
                           : Text("Login",
