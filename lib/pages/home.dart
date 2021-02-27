@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:project1/models/catalog.dart';
+import 'package:project1/widgets/drawer.dart';
 import 'package:project1/widgets/home_widgets/catalog_header.dart';
 import 'package:project1/widgets/home_widgets/catalog_list.dart';
-import 'package:project1/widgets/themes.dart';
+
 import 'package:velocity_x/velocity_x.dart';
 
 class Homepage extends StatefulWidget {
@@ -37,7 +38,10 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.creameColor,
+      appBar: AppBar(
+        title: Text("Catalog App"),
+      ),
+      // backgroundColor: MyTheme.creameColor,
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
@@ -53,8 +57,7 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
+      drawer: MyDrawer(),
     );
   }
 }
-
-

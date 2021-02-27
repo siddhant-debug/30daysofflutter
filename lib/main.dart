@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:project1/pages/login_page.dart';
+import 'package:project1/pages/toabout.dart';
 
 import 'pages/home.dart';
 import 'utils/routes.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
         "/": (context) => Loginpage(),
         MyRoutes.homeRoute: (context) => Homepage(),
         MyRoutes.loginRoute: (context) => Loginpage(),
+        MyRoutes.toabout: (context) => About(),
       },
     );
   }
