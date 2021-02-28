@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project1/pages/cartpage.dart';
 import 'package:project1/pages/contacts.dart';
 
 import 'package:project1/pages/login_page.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.toabout: (context) => About(),
         MyRoutes.contacts:(context)=>Contacts(),
         MyRoutes.staff:(context)=>Staff(),
+        MyRoutes.cartRoute:(context)=>CartPage(),
       },
     );
   }

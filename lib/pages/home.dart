@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:project1/models/catalog.dart';
+import 'package:project1/utils/routes.dart';
 import 'package:project1/widgets/drawer.dart';
 import 'package:project1/widgets/home_widgets/catalog_header.dart';
 import 'package:project1/widgets/home_widgets/catalog_list.dart';
+import 'package:project1/widgets/themes.dart';
 
 import 'package:velocity_x/velocity_x.dart';
 
@@ -38,6 +40,13 @@ class _HomepageState extends State<Homepage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.pushNamed(context, MyRoutes.cartRoute);
+        },
+        backgroundColor: MyTheme.darkblueishColor,
+        child: Icon(Icons.shopping_cart),
+      ),
       appBar: AppBar(
         title: Text("Catalog"),
       ),

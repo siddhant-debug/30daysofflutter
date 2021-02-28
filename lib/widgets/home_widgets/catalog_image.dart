@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:project1/widgets/themes.dart';
+//import 'package:project1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class CatalogImage extends StatelessWidget {
@@ -13,9 +13,9 @@ class CatalogImage extends StatelessWidget {
         .box
         .rounded
         .p8
-        .color(MyTheme.creameColor)
+        .color(Colors.transparent)
         .make()
-        .p16()
+        .p8()
         .w40(context);
   }
 }

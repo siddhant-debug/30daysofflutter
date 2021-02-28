@@ -12,7 +12,9 @@ class HomeDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       backgroundColor: MyTheme.creameColor,
       bottomNavigationBar: Container(
         color: Colors.white,
@@ -52,6 +54,9 @@ class HomeDetailPage extends StatelessWidget {
                     catalog.name.text.xl4.color(MyTheme.darkblueishColor).bold.make(),
               catalog.desc.text.textStyle(context.captionStyle).xl.make(),
               10.heightBox,
+              "Released 2020, November 13 228g, 7.4mm thickness iOS 14.1, up to iOS 14.4 128GB/256GB/512GB storage, no card slot".
+              text.textStyle(context.captionStyle)
+              .make().p16()
                   ],
                 ).py64(),
               ),

@@ -5,4 +5,5 @@ class MyRoutes {
   static String toabout = "/about";
   static String contacts = "/contact";
   static String staff = "/staff";
+  static String cartRoute = "/cart";
 }
