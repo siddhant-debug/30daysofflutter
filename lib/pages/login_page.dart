@@ -83,13 +83,13 @@ class _LoginpageState extends State<Loginpage> {
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Enter Password",
-                      labelText: "Passowrd",
+                      labelText: "Password",
                     ),
                     validator: (value) {
                       if (value.isEmpty) {
                         return "Password cannot be empty";
                       } else if (value.length < 6) {
-                        return "passowr length should be atleast 6";
+                        return "password length should be atleast 6";
                       }
                       return null;
                     },

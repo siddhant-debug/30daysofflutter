@@ -1,7 +1,8 @@
+
+
 import 'package:flutter/material.dart';
 import 'themes.dart';
 import 'package:project1/utils/routes.dart';
-import 'package:flutter/src/widgets/navigator.dart';
 
 class MyDrawer extends StatefulWidget {
   @override
@@ -45,6 +46,9 @@ class _MyDrawerState extends State<MyDrawer> {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.staff);
+              },
               leading: Icon(
                 Icons.account_circle_rounded,
                 color: Colors.black,
@@ -58,6 +62,9 @@ class _MyDrawerState extends State<MyDrawer> {
               ),
             ),
             ListTile(
+              onTap: () {
+                Navigator.pushNamed(context, MyRoutes.contacts);
+              },
               leading: Icon(
                 Icons.phone,
                 color: Colors.black,

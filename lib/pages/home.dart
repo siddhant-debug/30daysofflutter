@@ -39,7 +39,7 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Catalog App"),
+        title: Text("Catalog"),
       ),
       // backgroundColor: MyTheme.creameColor,
       body: SafeArea(

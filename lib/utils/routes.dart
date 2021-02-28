@@ -3,4 +3,6 @@ class MyRoutes {
   static String homeRoute = "/home";
   static String homeDetailsRoute = "/detail";
   static String toabout = "/about";
+  static String contacts = "/contact";
+  static String staff = "/staff";
 }
