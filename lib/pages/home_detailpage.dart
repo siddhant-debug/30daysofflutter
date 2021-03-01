@@ -15,9 +15,9 @@ class HomeDetailPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
       ),
-      backgroundColor: MyTheme.creameColor,
+      backgroundColor: context.canvasColor,
       bottomNavigationBar: Container(
-        color: Colors.white,
+        color: context.cardColor,
               child: ButtonBar(
                   alignment: MainAxisAlignment.spaceBetween,
                   buttonPadding: EdgeInsets.zero,
@@ -27,7 +27,7 @@ class HomeDetailPage extends StatelessWidget {
                         onPressed: () {},
                         style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all(
-                                MyTheme.darkblueishColor),
+                                context.theme.buttonColor),
                             shape: MaterialStateProperty.all(StadiumBorder())),
                         child: "Buy".text.make()).wh(100, 50)
                   ],
@@ -47,11 +47,11 @@ class HomeDetailPage extends StatelessWidget {
               arcType: VxArcType.CONVEY,
               edge: VxEdge.TOP,
               child: Container(
-                color: Colors.white,
+                color: context.cardColor,
                 width: context.screenWidth,
                 child: Column(
                   children: [
-                    catalog.name.text.xl4.color(MyTheme.darkblueishColor).bold.make(),
+                    catalog.name.text.xl4.color(context.accentColor).bold.make(),
               catalog.desc.text.textStyle(context.captionStyle).xl.make(),
               10.heightBox,
               "Released 2020, November 13 228g, 7.4mm thickness iOS 14.1, up to iOS 14.4 128GB/256GB/512GB storage, no card slot".
