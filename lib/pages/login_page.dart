@@ -3,8 +3,6 @@ import 'package:project1/utils/routes.dart';
 import 'package:project1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
-
-
 class Loginpage extends StatefulWidget {
   @override
   _LoginpageState createState() => _LoginpageState();
@@ -31,9 +29,8 @@ class _LoginpageState extends State<Loginpage> {
   Widget build(BuildContext context) {
     return Material(
       color: context.canvasColor,
-    
       child: SingleChildScrollView(
-          child: Form( 
+          child: Form(
         key: _formkey,
         child: Column(
           children: [
@@ -58,9 +55,7 @@ class _LoginpageState extends State<Loginpage> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 26, horizontal: 50)),
             Column(
-              
               children: [
-                
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
@@ -82,7 +77,6 @@ class _LoginpageState extends State<Loginpage> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: TextFormField(
-                    
                     obscureText: true,
                     decoration: InputDecoration(
                       hintText: "Enter Password",
@@ -102,7 +96,7 @@ class _LoginpageState extends State<Loginpage> {
                   height: 15,
                 ),
                 Material(
-                  color:context.theme.buttonColor,
+                  color: context.theme.buttonColor,
                   borderRadius: BorderRadius.circular(changeButton ? 50 : 20),
                   child: InkWell(
                     onTap: () => moveToHome(context),
@@ -111,10 +105,8 @@ class _LoginpageState extends State<Loginpage> {
                       width: changeButton ? 50 : 150,
                       height: 35,
                       alignment: Alignment.center,
-                      
                       child: changeButton
                           ? Icon(
-                              
                               Icons.done_outlined,
                               color: Colors.white,
                             )
@@ -126,13 +118,43 @@ class _LoginpageState extends State<Loginpage> {
                     ),
                   ),
                 ),
-                // ElevatedButton(
-                // child: Text("Login"),
-                //style: TextButton.styleFrom(minimumSize: Size(120, 50)),
-                //onPressed: () {
-                //Navigator.pushNamed(context, MyRoutes.homeRoute);
-                //},
-                //)
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  "OR",
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                Material(
+                  color: context.theme.buttonColor,
+                  borderRadius: BorderRadius.circular(changeButton ? 50 : 20),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, MyRoutes.Signup);
+                    },
+                    child: AnimatedContainer(
+                      duration: Duration(seconds: 1),
+                      width: changeButton ? 50 : 150,
+                      height: 35,
+                      alignment: Alignment.center,
+                      child: changeButton
+                          ? Icon(
+                              Icons.done_outlined,
+                              color: Colors.white,
+                            )
+                          : Text("SignUp",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20)),
+                    ),
+                  ),
+                )
               ],
             )
           ],

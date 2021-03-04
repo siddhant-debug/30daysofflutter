@@ -3,6 +3,7 @@ import 'package:project1/pages/cartpage.dart';
 import 'package:project1/pages/contacts.dart';
 
 import 'package:project1/pages/login_page.dart';
+import 'package:project1/pages/signup.dart';
 import 'package:project1/pages/staff.dart';
 import 'package:project1/pages/toabout.dart';
 
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
-      initialRoute: MyRoutes.homeRoute,
+      initialRoute: MyRoutes.loginRoute,
       routes: {
         "/": (context) => Loginpage(),
         MyRoutes.homeRoute: (context) => Homepage(),
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.contacts:(context)=>Contacts(),
         MyRoutes.staff:(context)=>Staff(),
         MyRoutes.cartRoute:(context)=>CartPage(),
+        MyRoutes.Signup:(context)=>SignupPage(),
       },
     );
   }

@@ -48,10 +48,13 @@ class _HomepageState extends State<Homepage> {
         backgroundColor: context.theme.buttonColor,
         child: Icon(Icons.shopping_cart, color: Colors.white,),
       ),
-      // appBar: AppBar(
-      //   title: Text("Catalog"),
-      // ),
-      // backgroundColor: MyTheme.creameColor,
+      appBar: AppBar(
+        backgroundColor: context.canvasColor,
+        title: Text("Catalog" , style: TextStyle(
+          color: context.accentColor,
+        ),),
+      ),
+     
       body: SafeArea(
         child: Container(
           padding: Vx.m32,
