@@ -33,6 +33,7 @@ class _AboutState extends State<About> {
                   fontSize: 20,
                   fontStyle: FontStyle.italic,
                   fontFamily: GoogleFonts.openSansCondensed().fontFamily,
+                  color: Colors.black,
                 ),
               ),
             ],

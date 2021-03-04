@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project1/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class SignupPage extends StatefulWidget {
   @override
@@ -10,58 +11,85 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Column(
-        children: [
-          Image.asset(
-            "assets/images/signup.jpeg",
-            fit: BoxFit.fitHeight,
-          ),
-          SizedBox(
-            height: 30,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Username",
+      child: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage("assets/images/bg3.jpg"),
+            fit: BoxFit.cover,
+          )),
+          child: SafeArea(
+            child: Center(
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 30,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          labelText: "Username",
+                          hintText: "Enter username",
+                          labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: context.accentColor,
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          labelText: "Email ID",
+                          hintText: "Enter Email ID",
+                          labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: context.accentColor,
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          labelText: "Password",
+                          hintText: "Enter password",
+                          labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: context.accentColor,
+                          )),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextFormField(
+                      decoration: InputDecoration(
+                          labelText: "Confirm Password ",
+                          hintText: "confirm password",
+                          labelStyle: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: context.accentColor,
+                          )),
+                    ),
+                  ),
+                  OutlineButton(
+                    child: Text(
+                      "Back",
+                      style: TextStyle(fontSize: 20.0),
+                    ),
+                    highlightedBorderColor: Colors.red,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(15)),
+                    onPressed: () {
+                      Navigator.pushNamed(context, MyRoutes.loginRoute);
+                    },
+                  ),
+                ],
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Email ID",
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: "Password",
-              ),
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TextFormField(
-              decoration: InputDecoration(labelText: "Confirm Password "),
-            ),
-          ),
-          OutlineButton(
-            child: Text(
-              "Back",
-              style: TextStyle(fontSize: 20.0),
-            ),
-            highlightedBorderColor: Colors.red,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-            onPressed: () {
-              Navigator.pushNamed(context, MyRoutes.loginRoute);
-            },
-          ),
-        ],
+        ),
       ),
     );
   }

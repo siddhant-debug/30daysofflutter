@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'themes.dart';
 import 'package:project1/utils/routes.dart';
+import 'package:velocity_x/velocity_x.dart';
 
 class MyDrawer extends StatefulWidget {
   @override
@@ -13,8 +14,10 @@ class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      
       child: Container(
-        color: MyTheme.creameColor,
+        
+        color: context.canvasColor,
         child: ListView(
           children: [
             DrawerHeader(
@@ -35,13 +38,13 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.border_color,
-                color: Colors.black,
+                color: Colors.white,
               ),
               title: Text(
                 "About",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -51,13 +54,13 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.account_circle_rounded,
-                color: Colors.black,
+                color: Colors.white,
               ),
               title: Text(
                 "Staff",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -67,13 +70,13 @@ class _MyDrawerState extends State<MyDrawer> {
               },
               leading: Icon(
                 Icons.phone,
-                color: Colors.black,
+                color: Colors.white,
               ),
               title: Text(
                 "Contact",
                 textScaleFactor: 1.2,
                 style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white,
                 ),
               ),
             )
