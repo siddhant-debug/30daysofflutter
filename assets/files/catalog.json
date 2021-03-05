@@ -1,68 +1,67 @@
 {
-
     "products": [{
             "id": 1,
-            "name": "iPhone 12 Pro",
-            "desc": "Apple iPhone 12th generation",
-            "price": 129999,
+            "name": "Hair Cut",
+            "desc": "Hair Cut For mens",
+            "price": 100,
             "color": "#33505a",
-            "image": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-12-pro-family-hero?wid=940&amp;hei=1112&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1604021663000"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT73442bQFROhZkW0VOzZ9aCexVvKCojo2eaA&usqp=CAU"
         },
         {
             "id": 2,
-            "name": "Pixel 5",
-            "desc": "Google Pixel phone 5th generation",
-            "price": 51699,
+            "name": " Kids Hair Cut",
+            "desc": "Hair cut for kids",
+            "price": 50,
             "color": "#00ac51",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd0JhwLvm_uLDLc-la7hK9WyVpe9naJFcebKfhcICiq2KtvXDePNAU_9QO06LPcQ0K0fLByc7m&usqp=CAc"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0ykyQhxh7NvKlh-btQHnTBJykJp5-8KwNNA&usqp=CAU"
         },
         {
             "id": 3,
-            "name": "M1 Macbook Air",
-            "desc": "Apple Macbook air with apple silicon",
-            "price": 119999,
+            "name": " Women Hair Cut",
+            "desc": "Hair Cut For women",
+            "price": 200,
             "color": "#e0bfae",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMOMstwtmLnjFb3NHiDJ_kcQnueNVH-rv_3ps96HZmXlFumKWaiBqq_L4Uoyx3iFiNTrXNEbyB&usqp=CAc"
+            "image": "https://i.pinimg.com/originals/3c/22/b6/3c22b6bff7bb7867507f3cc6bc335b93.jpg"
         },
         {
             "id": 4,
-            "name": "Playstation 5",
-            "desc": "Sony Playstation 5th generation",
-            "price": 35000,
+            "name": "o3+ facial",
+            "desc": "Premium quality facial",
+            "price": 3000,
             "color": "#544ee4",
-            "image": "https://media.wired.com/photos/5fab1094227dbb78ec30db78/master/w_2560%2Cc_limit/Gear-PS5-src-Sony.jpg"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa-_xk-djfPkN7EJnwPXknVBY8_Yab46xYfpd12HNz5AFBlWL3mG2yRersyOLvoClv4O8RB-os&usqp=CAc"
         },
         {
             "id": 5,
-            "name": "Airpods Pro",
-            "desc": "Apple Aipods Pro 1st generation",
-            "price": 25000,
+            "name": "Hair colour",
+            "desc": "Mens hair colour",
+            "price": 1000,
             "color": "#e3e4e9",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROEs084z65psoo06zYl5R0tUzywOVKVQZzmzqCj3PDP1vVJTWv3gGwGMFENSy4qV4n7sEQjE&usqp=CAc"
+            "image": "https://menshairstyle.funtouzy.com/wp-content/uploads/2020/07/Mens-Hair-Color-Trends-2021-Best-Hair-Dyes-For-Men.jpg"
         },
         {
             "id": 6,
-            "name": "iPad Pro",
-            "desc": "Apple iPad Pro 2020 edition",
-            "price": 22799,
+            "name": "Hair Spa",
+            "desc": "Premium Qualtiy spa",
+            "price": 1000,
             "color": "#f73984",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNzUeRQ5uH7E3hpECib8qxdhfHv6SnUGT7mOsew_xiOoqRR7ZpdH-TQ4J6-HuIEfqHimYyPXWH&usqp=CAc"
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_jy_tSIB0f44RHRe5m10efA8S2lYZGy64WA&usqp=CAU"
         },
         {
             "id": 7,
-            "name": "Galaxy S21 Ultra",
-            "desc": "Samsung Galaxy S21 Ultra 2021 edition",
-            "price": 72999,
+            "name": "Rebonding",
+            "desc": "Hair rebonding",
+            "price": 5000,
             "color": "#1c1c1c",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT_PZcc0wicVYR992s5QCIDLYy8t-z-9kibTUdWZBN2sd86aaqdAJfhvxAwZNWV9wfdzDikpr1&usqp=CAc"
+            "image": "https://images.herzindagi.info/image/2021/Jan/rebonded-hair-main_g.jpg"
         },
         {
             "id": 8,
-            "name": "Galaxy S21",
-            "desc": "Samsung Galaxy S21 2021 edition",
-            "price": 68999,
+            "name": "Starigntening",
+            "desc": "Straighntening",
+            "price": 3000,
             "color": "#7c95eb",
-            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBNHd7FwarbxA1xdMFt24KazjcR4dWPH_t_T5dz4YNK1s7rJAQ8gOIuR_NRw6eeiQgFhbZ9sAN&usqp=CAc"
+            "image": "https://4.imimg.com/data4/BU/VJ/ANDROID-47691915/product-500x500.jpeg"
         }
     ]
 }

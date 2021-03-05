@@ -6,5 +6,5 @@ class MyRoutes {
   static String contacts = "/contact";
   static String staff = "/staff";
   static String cartRoute = "/cart";
-  static String Signup = "/Signup";
+  static String signup = "/Signup";
 }

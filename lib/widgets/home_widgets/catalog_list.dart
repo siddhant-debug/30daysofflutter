@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project1/models/catalog.dart';
 import 'package:project1/pages/home_detailpage.dart';
-import 'package:project1/widgets/themes.dart';
+import 'package:project1/utils/routes.dart';
+//import 'package:project1/widgets/themes.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 import 'catalog_image.dart';
@@ -38,12 +39,10 @@ class CatalogItem extends StatelessWidget {
       child: Row(
         children: [
           Hero(
-            tag: Key(catalog.id.toString()),
-                      child: CatalogImage(
-              image: catalog.image,
-              
-            )
-          ),
+              tag: Key(catalog.id.toString()),
+              child: CatalogImage(
+                image: catalog.image,
+              )),
           Expanded(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -58,7 +57,9 @@ class CatalogItem extends StatelessWidget {
                 children: [
                   "\u20B9${catalog.price}".text.bold.xl.make(),
                   ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, MyRoutes.cartRoute);
+                      },
                       style: ButtonStyle(
                           backgroundColor: MaterialStateProperty.all(
                               context.theme.buttonColor),

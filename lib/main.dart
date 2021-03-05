@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         MyRoutes.contacts:(context)=>Contacts(),
         MyRoutes.staff:(context)=>Staff(),
         MyRoutes.cartRoute:(context)=>CartPage(),
-        MyRoutes.Signup:(context)=>SignupPage(),
+        MyRoutes.signup:(context)=>SignupPage(),
       },
     );
   }

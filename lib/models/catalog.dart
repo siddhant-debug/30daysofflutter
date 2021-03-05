@@ -70,7 +70,7 @@ class Item {
 
   @override
   String toString() {
-    return 'Item(id: $id, name: $name, desc: $desc, price: $price, color: $color, image: $image)';
+    return 'Item(id: $id, name: $name, desc: $desc, price: $price,color:$color, image: $image)';
   }
 
   @override

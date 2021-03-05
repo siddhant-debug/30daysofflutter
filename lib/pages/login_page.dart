@@ -140,7 +140,7 @@ class _LoginpageState extends State<Loginpage> {
                     borderRadius: BorderRadius.circular(changeButton ? 50 : 20),
                     child: InkWell(
                       onTap: () {
-                        Navigator.pushNamed(context, MyRoutes.Signup);
+                        Navigator.pushNamed(context, MyRoutes.signup);
                       },
                       child: AnimatedContainer(
                         duration: Duration(seconds: 1),
