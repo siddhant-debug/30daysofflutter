@@ -73,14 +73,12 @@ class _SignupPageState extends State<SignupPage> {
                           )),
                     ),
                   ),
-                  OutlineButton(
+                  ElevatedButton(
                     child: Text(
                       "Back",
                       style: TextStyle(fontSize: 20.0),
                     ),
-                    highlightedBorderColor: Colors.red,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(15)),
+                  
                     onPressed: () {
                       Navigator.pushNamed(context, MyRoutes.loginRoute);
                     },
