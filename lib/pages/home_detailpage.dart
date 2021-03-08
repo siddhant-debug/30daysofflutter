@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:project1/models/catalog.dart';
 //import 'package:project1/utils/routes.dart';
@@ -27,7 +25,9 @@ class HomeDetailPage extends StatelessWidget {
           buttonPadding: EdgeInsets.zero,
           children: [
             "\u20B9${catalog.price}".text.bold.xl4.red800.make(),
-            AddToCart(catalog: catalog,).wh(100, 50)
+            AddToCart(
+              catalog: catalog,
+            ).wh(100, 50)
           ],
         ).p32(),
       ),
@@ -55,7 +55,7 @@ class HomeDetailPage extends StatelessWidget {
                         .make(),
                     catalog.desc.text.textStyle(context.captionStyle).xl.make(),
                     10.heightBox,
-                    "Released 2020, November 13 228g, 7.4mm thickness iOS 14.1, up to iOS 14.4 128GB/256GB/512GB storage, no card slot"
+                    "koasokaso paksdok kapskdp kapdkpk ;as;dl lso JDIWN TOA nej osk ak papsl adas   ssaodj ojwoe klalsd lalsdl lasdm lasmdl maskdsda sdls ljlajsdj ljaljwdlj woe iioaiwo poapo pqw"
                         .text
                         .textStyle(context.captionStyle)
                         .make()
