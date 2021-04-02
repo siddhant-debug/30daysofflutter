@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:project1/core/store.dart';
+import 'package:project1/models/cart.dart';
 import 'dart:convert';
 import 'package:project1/models/catalog.dart';
 import 'package:project1/utils/routes.dart';
@@ -16,7 +18,6 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  
   @override
   void initState() {
     super.initState();
@@ -29,7 +30,7 @@ class _HomepageState extends State<Homepage> {
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
-   
+
     CatalogModel.items = List.from(productsData)
         .map<Item>((item) => Item.fromMap(item))
         .toList();
@@ -38,16 +39,28 @@ class _HomepageState extends State<Homepage> {
 
   @override
   Widget build(BuildContext context) {
+    final _cart = (VxState.store as MyStore).cart;
     return Scaffold(
       backgroundColor: context.canvasColor,
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          Navigator.pushNamed(context, MyRoutes.cartRoute);
-        },
-        backgroundColor: context.theme.buttonColor,
-        child: Icon(
-          Icons.shopping_cart,
-          color: Colors.white,
+      floatingActionButton: VxBuilder(
+        mutations: {AddMutation, RemoveMutation},
+        builder: (ctx, _) => FloatingActionButton(
+          onPressed: () {
+            Navigator.pushNamed(context, MyRoutes.cartRoute);
+          },
+          backgroundColor: context.theme.buttonColor,
+          child: Icon(
+            Icons.shopping_cart,
+            color: Colors.white,
+          ),
+        ).badge(
+          color: Colors.red,
+          size: 30,
+          count: _cart.items.length,
+          textStyle: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
       appBar: AppBar(

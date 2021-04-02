@@ -40,30 +40,34 @@ class HomeDetailPage extends StatelessWidget {
                     child: Image.network(catalog.image))
                 .h32(context),
             Expanded(
-                child: VxArc(
-              height: 25.0,
-              arcType: VxArcType.CONVEY,
-              edge: VxEdge.TOP,
-              child: Container(
-                color: context.cardColor,
-                width: context.screenWidth,
-                child: Column(
-                  children: [
-                    catalog.name.text.xl4
-                        .color(context.accentColor)
-                        .bold
-                        .make(),
-                    catalog.desc.text.textStyle(context.captionStyle).xl.make(),
-                    10.heightBox,
-                    "koasokaso paksdok kapskdp kapdkpk ;as;dl lso JDIWN TOA nej osk ak papsl adas   ssaodj ojwoe klalsd lalsdl lasdm lasmdl maskdsda sdls ljlajsdj ljaljwdlj woe iioaiwo poapo pqw"
-                        .text
-                        .textStyle(context.captionStyle)
-                        .make()
-                        .p16()
-                  ],
-                ).py64(),
+              child: VxArc(
+                height: 25.0,
+                arcType: VxArcType.CONVEY,
+                edge: VxEdge.TOP,
+                child: Container(
+                  color: context.cardColor,
+                  width: context.screenWidth,
+                  child: Column(
+                    children: [
+                      catalog.name.text.xl4
+                          .color(context.accentColor)
+                          .bold
+                          .make(),
+                      catalog.desc.text
+                          .textStyle(context.captionStyle)
+                          .xl
+                          .make(),
+                      10.heightBox,
+                      "koasokaso paksdok kapskdp kapdkpk ;as;dl lso JDIWN TOA nej osk ak papsl adas   ssaodj ojwoe klalsd lalsdl lasdm lasmdl maskdsda sdls ljlajsdj ljaljwdlj woe iioaiwo poapo pqw"
+                          .text
+                          .textStyle(context.captionStyle)
+                          .make()
+                          .p16()
+                    ],
+                  ).py64(),
+                ),
               ),
-            ))
+            ),
           ],
         ),
       ),

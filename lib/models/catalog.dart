@@ -17,7 +17,7 @@ class Item {
   final String name;
   final String desc;
   final num price;
-  final String color;
+  //final String color;
   final String image;
 
   Item({
@@ -25,7 +25,7 @@ class Item {
     this.name,
     this.desc,
     this.price,
-    this.color,
+    //this.color,
     this.image,
   });
 
@@ -42,7 +42,7 @@ class Item {
       name: name ?? this.name,
       desc: desc ?? this.desc,
       price: price ?? this.price,
-      color: color ?? this.color,
+      //color: color ?? this.color,
       image: image ?? this.image,
     );
   }
@@ -53,7 +53,7 @@ class Item {
       'name': name,
       'desc': desc,
       'price': price,
-      'color': color,
+      //'color': color,
       'image': image,
     };
   }
@@ -66,7 +66,7 @@ class Item {
       name: map['name'],
       desc: map['desc'],
       price: map['price'],
-      color: map['color'],
+     // color: map['color'],
       image: map['image'],
     );
   }
@@ -77,7 +77,7 @@ class Item {
 
   @override
   String toString() {
-    return 'Item(id: $id, name: $name, desc: $desc, price: $price,color:$color, image: $image)';
+    return 'Item(id: $id, name: $name, desc: $desc, price: $price, image: $image)';
   }
 
   @override
@@ -89,7 +89,7 @@ class Item {
         o.name == name &&
         o.desc == desc &&
         o.price == price &&
-        o.color == color &&
+        //o.color == color &&
         o.image == image;
   }
 
@@ -99,7 +99,7 @@ class Item {
         name.hashCode ^
         desc.hashCode ^
         price.hashCode ^
-        color.hashCode ^
+        //color.hashCode ^
         image.hashCode;
   }
 }
