@@ -14,18 +14,14 @@ import 'utils/routes.dart';
 import 'widgets/themes.dart';
 
 void main() {
-  runApp(VxState(
-    store: MyStore(),
-    child: MyApp()
-    )
-  );
+  runApp(VxState(store: MyStore(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      themeMode: ThemeMode.system,
+      themeMode: ThemeMode.dark,
       theme: MyTheme.lightTheme(context),
       darkTheme: MyTheme.darkTheme(context),
       debugShowCheckedModeBanner: false,
@@ -35,10 +31,10 @@ class MyApp extends StatelessWidget {
         MyRoutes.homeRoute: (context) => Homepage(),
         MyRoutes.loginRoute: (context) => Loginpage(),
         MyRoutes.toabout: (context) => About(),
-        MyRoutes.contacts:(context)=>Contacts(),
-        MyRoutes.staff:(context)=>Staff(),
-        MyRoutes.cartRoute:(context)=>CartPage(),
-        MyRoutes.signup:(context)=>SignupPage(),
+        MyRoutes.contacts: (context) => Contacts(),
+        MyRoutes.staff: (context) => Staff(),
+        MyRoutes.cartRoute: (context) => CartPage(),
+        MyRoutes.signup: (context) => SignupPage(),
       },
     );
   }

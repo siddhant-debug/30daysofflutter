@@ -27,14 +27,10 @@ class _AboutState extends State<About> {
                 fit: BoxFit.cover,
               ),
               Text(
-                "Hello We are B make overs salon and we are one of the fastest growing unisex salon in Gr,NOida we are situated  in one of the  finestr society named Omaxe palm green. ",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,
-                  fontFamily: GoogleFonts.openSansCondensed().fontFamily,
-                  color: Colors.black,
-                ),
+                'BMakeOvers always endeavors to teach and prepare their beauticians\n'
+                ' about the most recent procedures and styles with the cutting edge innovation,\n'
+                ' by sending the beauticians to different classes and by taking an interest in different occasions over all kinds.',
+                style: GoogleFonts.aladin(fontSize: 27, color: Colors.black54),
               ),
             ],
           ),

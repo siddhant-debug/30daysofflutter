@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:velocity_x/velocity_x.dart';
 
@@ -11,8 +12,14 @@ class CatalogHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          "Catalog App".text.xl5.bold.color(context.theme.accentColor).make(),
-          "Trending Products".text.xl2.make(),
+          "BMakeover"
+              .text
+              .xl5
+              .bold
+              .color(context.theme.accentColor)
+              .textStyle(GoogleFonts.aladin())
+              .make(),
+          "Trending Products".text.xl2.textStyle(GoogleFonts.aladin()).make(),
         ],
       ),
     );

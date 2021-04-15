@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:project1/models/catalog.dart';
 //import 'package:project1/utils/routes.dart';
 import 'package:project1/widgets/home_widgets/addtocart.dart';
@@ -57,12 +58,17 @@ class HomeDetailPage extends StatelessWidget {
                           .textStyle(context.captionStyle)
                           .xl
                           .make(),
-                      10.heightBox,
-                      "koasokaso paksdok kapskdp kapdkpk ;as;dl lso JDIWN TOA nej osk ak papsl adas   ssaodj ojwoe klalsd lalsdl lasdm lasmdl maskdsda sdls ljlajsdj ljaljwdlj woe iioaiwo poapo pqw"
-                          .text
-                          .textStyle(context.captionStyle)
-                          .make()
-                          .p16()
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Expanded(
+                        child: SizedBox(
+                          child:
+                              'ahjasiaisdiasjsiadj iasid jsaidj iajsdij iasds,a,d a,s,d,asasdjkask daskakskdksakkkkkkkkkkkkkkdaskdkaskdddddkaskkdakdkaskdkaskdaksdkaskdkaksdkasdkaksdkaskdaksdkaskdkasdkaskdkasdkaskdkadkakdkaskdkasdkakkjak kskk a  ajsdj aksdkjk a'
+                                  .text
+                                  .make(),
+                        ),
+                      ),
                     ],
                   ).py64(),
                 ),

@@ -4,8 +4,11 @@ import 'package:project1/core/store.dart';
 import 'package:project1/models/cart.dart';
 import 'dart:convert';
 import 'package:project1/models/catalog.dart';
+import 'package:project1/pages/contacts.dart';
+import 'package:project1/pages/staff.dart';
+import 'package:project1/pages/toabout.dart';
 import 'package:project1/utils/routes.dart';
-import 'package:project1/widgets/drawer.dart';
+
 import 'package:project1/widgets/home_widgets/catalog_header.dart';
 import 'package:project1/widgets/home_widgets/catalog_list.dart';
 //import 'package:project1/widgets/themes.dart';
@@ -27,7 +30,7 @@ class _HomepageState extends State<Homepage> {
   loaddata() async {
     await Future.delayed(Duration(seconds: 2));
     final catalogJson =
-        await rootBundle.loadString("assets/files/catalog.json");
+        await rootBundle.loadString("assets/files/bmakeover.json");
     final decodedData = jsonDecode(catalogJson);
     var productsData = decodedData["products"];
 
@@ -36,6 +39,36 @@ class _HomepageState extends State<Homepage> {
         .toList();
     setState(() {});
   }
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+      if (_selectedIndex == 0) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) {
+            return About();
+          }),
+        );
+      } else if (_selectedIndex == 1) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) {
+            return Staff();
+          }),
+        );
+      } else if (_selectedIndex == 2) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) {
+            return Contacts();
+          }),
+        );
+      }
+    });
+  }
+
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -50,8 +83,8 @@ class _HomepageState extends State<Homepage> {
           },
           backgroundColor: context.theme.buttonColor,
           child: Icon(
-            Icons.shopping_cart,
-            color: Colors.white,
+            Icons.favorite,
+            color: Colors.red,
           ),
         ).badge(
           color: Colors.red,
@@ -60,15 +93,6 @@ class _HomepageState extends State<Homepage> {
           textStyle: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-      appBar: AppBar(
-        backgroundColor: context.canvasColor,
-        title: Text(
-          "Catalog",
-          style: TextStyle(
-            color: context.accentColor,
           ),
         ),
       ),
@@ -87,7 +111,37 @@ class _HomepageState extends State<Homepage> {
           ),
         ),
       ),
-      drawer: MyDrawer(),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white10,
+        type: BottomNavigationBarType.fixed,
+        selectedLabelStyle:
+            TextStyle(fontWeight: FontWeight.bold, color: Colors.black),
+        currentIndex: _selectedIndex,
+        onTap: _onItemTapped,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: Colors.black,
+            ),
+            label: 'ABOUT US',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.face,
+              color: Colors.black,
+            ),
+            label: 'STAFF',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.phone,
+              color: Colors.black,
+            ),
+            label: 'CONTACT US',
+          ),
+        ],
+      ),
     );
   }
 }
